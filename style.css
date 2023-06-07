@@ -208,7 +208,7 @@ li{
 .cart-image{
     width: 40px;
     padding:10px;
-    
+
     background-color: white;
     margin-right: 20px;
     margin-top: 10px;
@@ -545,7 +545,7 @@ li{
         left: -250px;
         width: 200px;
         margin: 0;
-        top: 70px;
+        top: 60px;
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
         border-bottom-left-radius: 0px;
