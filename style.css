@@ -602,7 +602,7 @@ li{
         color: white;
     }
     #search-input{
-        height: 50px;
+        height: 40px;
         width: 60%;
         outline: none;
         padding: 0px 10px;
@@ -613,12 +613,21 @@ li{
         font-size: 15px;
     }
     #search-icon{
+
         color: gray;
-        padding: 14.5px 20px;
+        height: 11px;
+        display: flex;
+        align-items: top;
+        text-align: center;
         background-color: white;
         border-top-right-radius: 30px;
         border-bottom-right-radius:30px ;
+       
     }
+    .fa-search{
+       margin-bottom: -15px;
+    }
+    
     /* CART */
 #cart-section{
     margin-top: 90px;
