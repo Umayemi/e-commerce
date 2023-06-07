@@ -208,6 +208,7 @@ li{
 .cart-image{
     width: 40px;
     padding:10px;
+    
     background-color: white;
     margin-right: 20px;
     margin-top: 10px;
@@ -583,6 +584,7 @@ li{
     #product-image{
         width: 150px;
         height: 150px;
+        object-fit: contain;
     }
     #prices{
         font-size: 12px;
@@ -693,7 +695,7 @@ li{
     align-items: center;
 }
 #excel{
-    margin-top: 0px;
+    margin-top: 50px;
     padding: 20px;
     justify-content: center;
 }
@@ -706,7 +708,7 @@ li{
 }
 #desc-text{
     color: black;
-    margin-left: 30px;
+    margin-left: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -720,8 +722,9 @@ li{
     padding: 20px 0px;
 }
 #single-image{
-    width: 250px;
-    height: 250px;
+    width: 320px;
+    height: 350px;
+    object-fit: contain;
 }
 .single-title{
     font-size: 20px;
