@@ -696,12 +696,20 @@ li{
     align-items: center;
 }
 #excel{
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
     padding: 20px;
+    height: 100%;
     justify-content: center;
+    margin-top: 100px;
 }
 #single-description{
     display: flex;
+    top: 50%;
+    
+    position: absolute;
     flex-direction: column;
     margin: auto;
     text-align: center;
