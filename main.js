@@ -226,7 +226,7 @@ let running=()=>{
         </div>
         <p class="empty-test">Your cart is empty! </p>
         <p class="empty-test">Browse our categories and discover our best deals</p>
-        <a href="shop.html"><button id="empty-button">START SHOPPING</button>
+        <a href="index.html"><button id="empty-button">START SHOPPING</button>
     </div>`
     }
 }
