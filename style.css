@@ -461,6 +461,7 @@ li{
 /* quantity */
 .quantity{
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
     background-color: whitesmoke;
@@ -523,6 +524,14 @@ li{
 
 /* media screen */
 @media (max-width:960px){
+    .quantity{
+        position: relative;
+        width: 40px;
+        height: 30px;
+        padding: 0px 5px;
+        user-select: none;
+        
+    }
     header{
        padding: 0;
        padding: 10px 20px;
@@ -790,4 +799,28 @@ li{
     border-radius: 5px;
     border: 1px solid seagreen;
 }
+.btn-minus{
+    position: absolute;
+    left:10%;
+    color: red;
+    font-size: 30px;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    user-select: none;
+}
+.btn-plus{
+    right: 10%;
+    position: absolute;
+    font-size: 15px;
+    color: green;
+    cursor: pointer;
+    margin-bottom: 2px;
+    user-select: none;
+}
+.quan-num{
+    position: absolute;
+  font-size: 13px;
+}
+
 }
