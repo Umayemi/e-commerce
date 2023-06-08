@@ -48,6 +48,7 @@ const fetchData = async () => {
         }).join("");   
     }
     populate();
+    multiply();
       
 };
 fetchData();
@@ -99,6 +100,7 @@ const menStore = async ()=>{
         }).join(""); 
     }
     men();
+    multiply();
 }
 const fetchJewelery = async ()=>{
     let url = "https://fakestoreapi.com/products/category/jewelery";
@@ -119,6 +121,7 @@ const fetchJewelery = async ()=>{
         }).join(""); 
     }
     jewelery();
+    multiply();
 };
 const electronics = async ()=>{
     let url = "https://fakestoreapi.com/products/category/electronics";
@@ -139,6 +142,7 @@ const electronics = async ()=>{
         }).join(""); 
     }
     gadget();
+    multiply();
 }
 
 const womenStore = async ()=>{
@@ -160,6 +164,7 @@ const womenStore = async ()=>{
         }).join(""); 
     }
     women();
+    multiply();
 };
 let product = null
 const singleProduct = (id)=>{
