@@ -11,7 +11,7 @@ let excel = document.querySelector("#excel");
 const men = document.querySelector(".grouping1");
 const subtotalValue = document.querySelector("#checkout");
 const times = document.querySelector("#times");
-const hamburger = document.querySelector("#categories");
+const hamburger = document.querySelector("#categories1");
 const option=()=>{
     hamburger.style.left = "0px";
     times.style.display = "block"
@@ -294,7 +294,7 @@ let subtotal=()=>{
             <p>Subtotal</p>
             <p>$${roundedTotalPrice}</p>
         </div>
-        <button id="check-btn">checkout</button>`
+        <a href="login.html"><button id="check-btn">checkout</button></a>`
     });
     localStorage.setItem("data",JSON.stringify(newItem));  
     cartItems();

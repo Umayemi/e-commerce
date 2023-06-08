@@ -9,14 +9,55 @@
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div id="enclosed">
-    <section id="login">
-       <h1 id="login-head">welcome!</h1>
-       <p id="login-para">Type your e-mail or phone number to log in or create an account.</p>
-       <input type="text" id="login-input">
-    <a href="shop.html">  <button id="login-btn">Continue</button> </a> 
-    </section>
-</div>
-    <script src="index.js"></script
+    <section id="top"> 
+        <header>
+            <div ><a href="index.html"><P id="logo">SHOPPING MALL</P></a></div>
+            <div id="bars" onmouseover="option()">
+            <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            </div>
+            <div id="search">
+                <input type="search" id="search-input" placeholder="Search for products..." >
+                <div id="search-icon" onclick="searchFunction()"><i class="fa fa-search fa" aria-hidden="true"></i></div>
+            </div>
+            <nav>
+                <div id="profile">
+                   <a href="login.html">  <i class="fa fa-user fa-2x" aria-hidden="true" ></i> </a>
+                </div>
+                <div class="shopping">
+                <a href="cart.html">  <i class="fa fa-shopping-cart fa-2x" aria-hidden="true" id="cart-icon"></i> </a>
+                    <p class="items">0</p>
+
+                </div>
+            </nav>
+          
+        </header>
+    </section> 
+    <div id="products-container">
+        <div id="categories1">
+            <div id="times" onclick="multiply()">
+            <i class="fa fa-times fa-1.5x" aria-hidden="true"></i>
+            </div>
+     <p id="all" onclick="fetchData()">All products</p>
+     <p class="grouping" onclick="menStore()">Men's Clothing</p>
+     <p class="grouping" onclick="fetchJewelery()">Jeweleries</p> 
+     <p class="grouping" onclick="electronics()">Electronics</p> 
+     <p class="grouping" onclick="womenStore()">Women's clothing</p>
+     
+    </div>
+        <div id="categories">
+            <div id="times" onclick="multiply()">
+            <i class="fa fa-times fa-1.5x" aria-hidden="true"></i>
+            </div>
+     <p id="all" onclick="fetchData()">All products</p>
+     <p class="grouping" onclick="menStore()">Men's Clothing</p>
+     <p class="grouping" onclick="fetchJewelery()">Jeweleries</p> 
+     <p class="grouping" onclick="electronics()">Electronics</p> 
+     <p class="grouping" onclick="womenStore()">Women's clothing</p>
+     
+    </div>
+    <div id="wrapping">
+    </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
