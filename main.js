@@ -194,7 +194,7 @@ const fetchProduct = async() => {
 fetchProduct()
 let cartShopping=(id)=>{
     if (newItem.some((selectedItems)=>selectedItems.id === id)) {
-         changeQuantity("plus",id);
+         alert("item already added to cart.");
     }
     else {
         let selectedItems = products.find(item => (item.id === id));
