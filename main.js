@@ -248,9 +248,9 @@ let cartItems=()=>{
         <p>REMOVE</p>
     </div>
     <div class="quantity">
-        <div class="btn-minus" onclick="changeQuantity('minus',${x.id})" >-</div>
+        <div class="btn-minus" onclick="changeQuantity('minus',${x.id})" ><i class="fa fa-minus-circle" aria-hidden="true"></i></div>
         <div class="quan-num">${x.quantity}</div>
-        <div class="btn-plus" onclick="changeQuantity('plus',${x.id})">+</div>
+        <div class="btn-plus" onclick="changeQuantity('plus',${x.id})"><i class="fa fa-plus-circle" aria-hidden="true"></i></div>
     </div>
 </div>
 <div id="empty-line"></div>
