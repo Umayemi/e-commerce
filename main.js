@@ -193,8 +193,15 @@ const fetchProduct = async() => {
 
 fetchProduct()
 let cartShopping=(id)=>{
+    const pop = document.querySelector(".pop");
     if (newItem.some((selectedItems)=>selectedItems.id === id)) {
-         alert("item already added to cart.");
+        setTimeout(function() {
+            pop.style.opacity = "1";
+          }, 0);
+          
+          setTimeout(function() {
+            pop.style.opacity = "0";
+          }, 1000);
     }
     else {
         let selectedItems = products.find(item => (item.id === id));
