@@ -1,4 +1,15 @@
 
+const menuItems = document.querySelectorAll('.test');
+menuItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+        menuItems.forEach(function(item) {
+            item.classList.remove('activated');
+        });
+        this.classList.add('activated');
+        console.log(menuItems)
+    });
+});
+
 let Img = document.querySelector("#items-image");
 let cartBox = document.querySelector("#cart-box")
 let title = document.querySelector("#title");
@@ -8,7 +19,7 @@ let wrapper = document.querySelector("#wrapper");
 let items = document.querySelector(".items");
 const starTotal = 5;
 let excel = document.querySelector("#excel");
-const men = document.querySelector(".grouping1");
+
 const subtotalValue = document.querySelector("#checkout");
 const times = document.querySelector("#times");
 const hamburger = document.querySelector("#categories1");
@@ -33,19 +44,17 @@ const fetchData = async () => {
     });
     const populate = ()=>{
         wrapping.innerHTML= products.map((x)=>{
-            let rate = x.rating.rate;
-            let ratePercentage = ((rate)/5)*100;
-            let ratePercentageRounded = `${Math.round(ratePercentage/10)*10}%`
-            console.log(ratePercentageRounded);
+            let title = x.title;
+                let truncatedText = `${title.slice(0, 20)}...`;     
             return  ` <div id="product-design">
             <div id="product-image"><img src="${x.image}" alt="" class="images" onclick="singleProduct(${x.id})"></div>
-            <div id="description"><p>${x.title}</p></div>
+            <div id="description"><p>${truncatedText}</p></div>
             <div id="price_cart">
                 <div ><p id="prices">$${x.price}</p></div>
                 <div id="add_cart" onclick="cartShopping(${x.id})"> <i class="fa fa-shopping-cart fa" aria-hidden="true" ></i></div>
             </div>
         </div>`
-        }).join("");   
+        }).join(""); 
     }
     populate();
     multiply();
@@ -66,16 +75,17 @@ const searchFunction =()=>{
         }
         else{
             search.placeholder = `${searchResult.length} products found`;
-            console.log(searchResult);
-            wrapping.innerHTML= searchResult.map((x)=>{
+            wrapping.innerHTML= products.map((x)=>{
+                let title = x.title;
+                    let truncatedText = `${title.slice(0, 20)}...`;     
                 return  ` <div id="product-design">
                 <div id="product-image"><img src="${x.image}" alt="" class="images" onclick="singleProduct(${x.id})"></div>
-                <div id="description"><p>${x.title}</p></div>
+                <div id="description"><p>${truncatedText}</p></div>
                 <div id="price_cart">
-                <div ><p id="prices">$${x.price}</p></div>
-                <div id="add_cart" onclick="cartShopping(${x.id})"> <i class="fa fa-shopping-cart fa" aria-hidden="true" ></i></div>
+                    <div ><p id="prices">$${x.price}</p></div>
+                    <div id="add_cart" onclick="cartShopping(${x.id})"> <i class="fa fa-shopping-cart fa" aria-hidden="true" ></i></div>
                 </div>
-                </div>`
+            </div>`
             }).join(""); 
         }
         search.value = '';
@@ -89,9 +99,11 @@ const menStore = async ()=>{
     });
     const men =()=>{
         wrapping.innerHTML= products.map((x)=>{
+            let title = x.title;
+                let truncatedText = `${title.slice(0, 20)}...`;     
             return  ` <div id="product-design">
             <div id="product-image"><img src="${x.image}" alt="" class="images" onclick="singleProduct(${x.id})"></div>
-            <div id="description"><p>${x.title}</p></div>
+            <div id="description"><p>${truncatedText}</p></div>
             <div id="price_cart">
                 <div ><p id="prices">$${x.price}</p></div>
                 <div id="add_cart" onclick="cartShopping(${x.id})"> <i class="fa fa-shopping-cart fa" aria-hidden="true" ></i></div>
@@ -110,9 +122,11 @@ const fetchJewelery = async ()=>{
     });
     const jewelery =()=>{
         wrapping.innerHTML= products.map((x)=>{
+            let title = x.title;
+                let truncatedText = `${title.slice(0, 20)}...`;     
             return  ` <div id="product-design">
             <div id="product-image"><img src="${x.image}" alt="" class="images" onclick="singleProduct(${x.id})"></div>
-            <div id="description"><p>${x.title}</p></div>
+            <div id="description"><p>${truncatedText}</p></div>
             <div id="price_cart">
                 <div ><p id="prices">$${x.price}</p></div>
                 <div id="add_cart" onclick="cartShopping(${x.id})"> <i class="fa fa-shopping-cart fa" aria-hidden="true" ></i></div>
@@ -131,9 +145,11 @@ const electronics = async ()=>{
     });
     const gadget =()=>{
         wrapping.innerHTML= products.map((x)=>{
+            let title = x.title;
+                let truncatedText = `${title.slice(0, 20)}...`;     
             return  ` <div id="product-design">
             <div id="product-image"><img src="${x.image}" alt="" class="images" onclick="singleProduct(${x.id})"></div>
-            <div id="description"><p>${x.title}</p></div>
+            <div id="description"><p>${truncatedText}</p></div>
             <div id="price_cart">
                 <div ><p id="prices">$${x.price}</p></div>
                 <div id="add_cart" onclick="cartShopping(${x.id})"> <i class="fa fa-shopping-cart fa" aria-hidden="true" ></i></div>
@@ -153,12 +169,14 @@ const womenStore = async ()=>{
     });
     const women =()=>{
         wrapping.innerHTML= products.map((x)=>{
+            let title = x.title;
+                let truncatedText = `${title.slice(0, 20)}...`;     
             return  ` <div id="product-design">
             <div id="product-image"><img src="${x.image}" alt="" class="images" onclick="singleProduct(${x.id})"></div>
-            <div id="description"><p>${x.title}</p></div>
+            <div id="description"><p>${truncatedText}</p></div>
             <div id="price_cart">
                 <div ><p id="prices">$${x.price}</p></div>
-                <div id="add_cart" onclick="cartShopping(${x.id})"> <i class="fa fa-shopping-cart" aria-hidden="true" ></i></div>
+                <div id="add_cart" onclick="cartShopping(${x.id})"> <i class="fa fa-shopping-cart fa" aria-hidden="true" ></i></div>
             </div>
         </div>`
         }).join(""); 
@@ -201,7 +219,7 @@ let cartShopping=(id)=>{
           
           setTimeout(function() {
             pop.style.opacity = "0";
-          }, 1000);
+          }, 3000);
     }
     else {
         let selectedItems = products.find(item => (item.id === id));
@@ -225,7 +243,6 @@ let cartButton=()=>{
 }
 let cartSection = document.querySelector("#cart-section");
 let running=()=>{
-    console.log(newItem)
     if (newItem.length == 0) {
         cartSection.innerHTML =` <div id="empty-cart">
         <div id="empty-cart">
@@ -308,7 +325,6 @@ let subtotal=()=>{
     if (newItem.length == 0) {
         subtotalValue.innerHTML = ""
     }
-    console.log(newItem);
 }
 subtotal();
 let removeItem=(id)=>{
