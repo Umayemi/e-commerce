@@ -75,7 +75,7 @@ const searchFunction =()=>{
         }
         else{
             search.placeholder = `${searchResult.length} products found`;
-            wrapping.innerHTML= products.map((x)=>{
+            wrapping.innerHTML= searchResult.map((x)=>{
                 let title = x.title;
                     let truncatedText = `${title.slice(0, 20)}...`;     
                 return  ` <div id="product-design">
